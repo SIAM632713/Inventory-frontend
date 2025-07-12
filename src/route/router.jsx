@@ -13,6 +13,7 @@ import ProductListbyBrand from "@/components/brand/productListbyBrand.jsx";
 import CategoryListbyproduct from "@/components/category/categoryListbyproduct.jsx";
 import CreatProduct from "@/components/product/creatProduct.jsx";
 import EditProduct from "@/components/product/editProduct.jsx";
+import ProtectedRoute from "@/route/ProtectedRoute.jsx";
 
 
 const router=createBrowserRouter([
@@ -22,46 +23,46 @@ const router=createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<ProductPage/>
+                element:(<ProtectedRoute><ProductPage/></ProtectedRoute>)
             },
             {
               path:'creat-product',
-              element:<CreatProduct/>
+              element:(<ProtectedRoute><CreatProduct/></ProtectedRoute>)
             },
             {
               path:"/update-product/:id",
-              element:<EditProduct/>
+              element:(<ProtectedRoute><EditProduct/></ProtectedRoute>)
             },
             {
                 path:"/brand",
-                element:<BrandPage/>
+                element:(<ProtectedRoute><BrandPage/></ProtectedRoute>)
             },
             {
               path:"/creat-brand",
-              element:<CreatBrand/>
+              element:(<ProtectedRoute><CreatBrand/></ProtectedRoute>)
             },
             {
                 path:"/edit-brand/:id",
-                element:<EditBrand/>
+                element:(<ProtectedRoute><EditBrand/></ProtectedRoute>)
             },
             {
               path:"/brand-list-byproduct/:brandID",
-              element:<ProductListbyBrand/>
+              element:(<ProtectedRoute><ProductListbyBrand/></ProtectedRoute>)
             },
             {
                 path:"/category",
-                element:<CategoryPage/>
+                element:(<ProtectedRoute><CategoryPage/></ProtectedRoute>)
             },
             {
                 path:"/creat-category",
-                element:<CreatCategory/>
+                element:(<ProtectedRoute><CreatCategory/></ProtectedRoute>)
             },
             {
                 path:"/update-category/:id",
-                element:<UpdateCategory/>
+                element:(<ProtectedRoute><UpdateCategory/></ProtectedRoute>)
             },{
             path:"/category-list-byproduct/:categoryID",
-                element:<CategoryListbyproduct/>
+                element:(<ProtectedRoute><CategoryListbyproduct/></ProtectedRoute>)
             }
         ]
     },
