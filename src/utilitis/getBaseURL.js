@@ -1,3 +1,3 @@
 export const getBaseURL=()=>{
-    return "http://localhost:8000"
+    return "https://inventory-backend-v8xu.onrender.com"
 }
